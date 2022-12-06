@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
-import { colors } from "../../constants/colors";
+import { colors } from "../../constants/themes/colors";
 import { styles } from "./styles";
 
 const Gaseosa = ({navigation}) => {
