@@ -1,6 +1,6 @@
 export { default as Categories} from './categories';
-export { default as Comidas} from './comidas';
-export { default as Bebidas} from './bebidas';
-export { default as Menu1} from './menu-1';
-export { default as Menu2} from './menu-2';
-export { default as Gaseosa} from './gaseosas';
+export { default as Products} from './products';
+export { default as Product} from './product';
+export { default as Cart } from './cart';
+export { default as Orders } from './orders'
+

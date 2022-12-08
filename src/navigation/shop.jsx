@@ -1,7 +1,7 @@
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from "react";
-import { Categories, Bebidas,  Comidas, Menu1, Menu2, Gaseosa } from "../screens";
+import { Categories,  Products, Product } from "../screens";
 
 
 const Stack = createNativeStackNavigator();
@@ -10,38 +10,28 @@ const ShopNavigator = () => {
     return(
         <Stack.Navigator 
             initialRouteName="Categories"
-            screenOptions={{headerTitleAlign:'center'}}
+            screenOptions={{
+                headerTitleAlign:'center'
+            }}
         >
             <Stack.Screen 
                 name="Categories" 
                 component={Categories}
-               // options={{headerShown:false}}
+                options={{headerShown:false}}
             />
             <Stack.Screen 
-                name="Comidas" 
-                component={Comidas}
-                //options={{headerShown:false}}
+                name="Products" 
+                component={Products}
+                options={({ route }) => ({ title: route.params.title,})}
             />
+            
             <Stack.Screen 
-                name="Bebidas" 
-                component={Bebidas}
-                options={{headerShown:true}}
+                name="Product" 
+                component={Product}
+                options={({ route }) => ({ title: route.params.title,})}
             />
-            <Stack.Screen 
-                name="Menu1" 
-                component={Menu1}
-                options={{headerShown:true}}
-            />
-            <Stack.Screen 
-                name="Menu2" 
-                component={Menu2}
-                options={{headerShown:true}}
-            />
-            <Stack.Screen 
-                name="Gaseosa" 
-                component={Gaseosa}
-                options={{headerShown:true}}
-            />
+            
+            
         </Stack.Navigator>
     );
 };

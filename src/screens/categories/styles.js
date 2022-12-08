@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
 
     container: {
         flex: 1,
+        paddingTop: 30,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: colors.background,
@@ -13,5 +14,10 @@ export const styles = StyleSheet.create({
         fontFamily: 'kalamB',
         fontSize: 22,
         color: colors.text,
-    }
+    },
+    containerList:{
+        
+        width:'100%',
+        height: 20,
+        },
 });

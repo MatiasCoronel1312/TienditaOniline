@@ -1,22 +1,58 @@
 export const MenuComidas = [
     {
       id: 1,
+      categoryId: 1,
       title: 'Pizza Muzarella',
+      price: 1100,
       color: '#FFD151',
     },
     {
       id: 2,
+      categoryId: 1,
       title: 'Ravioles',
+      price: 900,
       color: '#FFDDA1',
     },
     {
       id: 3,
+      categoryId: 1,
       title: 'Canelones',
       color: '#F8C537',
+      price: 800,
     },
     {
       id: 4,
+      categoryId: 1,
       title: 'Milanesa con pure',
       color: '#EDB230',
+      price: 1200,
     },
+      {
+        id: 5,
+        categoryId: 2,
+        title: 'Coca-cola',
+        color: '#EDB230',
+        price: 800,
+      },
+      {
+        id: 6,
+        categoryId: 2,
+        title: 'Sprite',
+        color: '#EDB230',
+        price: 800,
+      },
+      {
+        id: 7,
+        categoryId: 3,
+        title: 'Cerveza',
+        color: '#EDB230',
+        price: 1000,
+      },
+      {
+        id: 8,
+        categoryId: 3,
+        title: 'Vino',
+        color: '#EDB230',
+        price: 1800,
+      },
   ];
