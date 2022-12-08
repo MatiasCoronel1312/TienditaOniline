@@ -20,7 +20,7 @@ const Product = ({navigation, route}) => {
             <Text style={styles.title}>{route.params.title}</Text> 
             <Text style={styles.price}>{price}</Text>
             <Text style={styles.description}>description</Text>     
-            {console.warn(price)}
+          
             <Button
                 title="Categories"
                 color={colors.primary}

@@ -4,7 +4,7 @@ export const MenuComidas = [
       categoryId: 1,
       title: 'Pizza Muzarella',
       price: 1100,
-      color: '#FFD151',
+      color: '#FE2E2E',
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export const MenuComidas = [
       id: 4,
       categoryId: 1,
       title: 'Milanesa con pure',
-      color: '#EDB230',
+      color: '#F7FE2E',
       price: 1200,
     },
       {

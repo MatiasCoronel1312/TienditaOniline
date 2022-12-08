@@ -13,7 +13,7 @@ const Products = ({navigation, route}) => {
     };
     const filteredCategoryFood = MenuComidas.filter( food => food.categoryId === categoryId);
     const renderItem = ({item}) => <ProductItem item={item} onSelected={onSelected} />
-    console.warn(filteredCategoryFood);
+    
     return (
         <SafeAreaView style={styles.container}>
             

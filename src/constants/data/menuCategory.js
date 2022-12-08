@@ -2,7 +2,7 @@ export const MenuCategory = [
     {
       id: 1,
       title: 'Comidas',
-      color: '#FFD151',
+      color: '#FE2E2E',
     },
     {
       id: 2,
@@ -12,7 +12,7 @@ export const MenuCategory = [
     {
       id: 3,
       title: 'Bebidas con Alcohol',
-      color: '#F8C537',
+      color: '#FA5858',
     },
     {
       id: 4,
