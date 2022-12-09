@@ -31,4 +31,9 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'kalamB',
     },
+    img: {
+        height:50,
+        width:50,
+        borderRadius: 5,
+    }
 });

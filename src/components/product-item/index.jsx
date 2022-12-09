@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, View, Text  } from "react-native";
+import { TouchableOpacity, View, Text, Image  } from "react-native";
 import { styles } from "./styles";
 
 const ProductItem = ( { item, onSelected }) => {
@@ -8,7 +8,8 @@ const ProductItem = ( { item, onSelected }) => {
             <TouchableOpacity style={styles.item} onPress={() => onSelected(item)}>
                 <Text style={styles.title}>{item.title}</Text>
                 <View style={styles.detailContainer}>
-                    <Text style={styles.price}>${item.price}</Text>                    
+                    <Text style={styles.price}>${item.price}</Text>
+                    <Image source={{uri: item.image}} style={styles.img}/>                 
                 </View>
             </TouchableOpacity>
         </View>

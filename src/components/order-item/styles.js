@@ -6,13 +6,14 @@ import { colors } from "../../constants/themes/colors";
 export const styles = StyleSheet.create ({
     container: {
         flex: 1,
-        height: 125,
+        padding: 10,
+        marginHorizontal: 10,
+        marginVertical: 10,
+        height: 85,
         backgroundColor: colors.background,
         borderWidth: 1,
         borderRadius: 5,
-        borderColor: colors.secondary,
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        borderColor: colors.secondary,        
         shadowColor: '#000',
         shadowOffset: {
         width: 0,
@@ -20,18 +21,14 @@ export const styles = StyleSheet.create ({
         },
         shadowOpacity: 0.2,
         shadowRadius: 1.41,
-        elevation: 2,
-        margin: 10,
+        elevation: 5,
+        
+        
     },
     headerContainer: {
 
     },
-    header: {
-        fontSize: 20,
-        fontFamily: 'kalamB',
-        color: colors.text,
-        marginBottom: 5,
-    },
+    
     contentContainer: {
         flex: 1,
         flexDirection: 'row',
@@ -40,13 +37,13 @@ export const styles = StyleSheet.create ({
         alignItems: 'center',
     },
     content: {
-        flex: 1,
+        //flex: 1,
     },
-    quantity: {
+    date: {
         fontSize: 14,
         fontFamily: 'kalamR'
     },
-    price: {
+    total: {
         fontSize: 18,
         fontFamily: 'kalamR'
     },

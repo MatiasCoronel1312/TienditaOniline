@@ -9,7 +9,7 @@ const OrderItem = ({item, onDelete}) => {
     return(
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <Text>{formatDate(item.date)}</Text>
+                <Text style={styles.date}>{formatDate(item.date)}</Text>
                 <Text style={styles.header}>{item.title}</Text>
             </View>
             <View style={styles.contentContainer}>

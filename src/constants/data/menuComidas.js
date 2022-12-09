@@ -5,6 +5,7 @@ export const MenuComidas = [
       title: 'Pizza Muzarella',
       price: 1100,
       color: '#FE2E2E',
+      image: 'https://goldbelly.imgix.net/uploads/showcase_media_asset/image/97981/2-lou-malnatis-deep-dish-pizzas.bf0fe065d251a9cca3925b269d443a27.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1'
     },
     {
       id: 2,

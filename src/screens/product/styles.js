@@ -6,11 +6,12 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         
-        backgroundColor: colors.background,
+        backgroundColor: colors.secondary,
     },
-    containerList: {
-        flex: 1,
-        alignItems: 'center',
+    content: {
+        borderRadius:20,
+        padding:5,
+        margin:5,
         justifyContent: 'center',
         backgroundColor: colors.background,
     },
@@ -18,5 +19,28 @@ export const styles = StyleSheet.create({
         fontFamily: 'kalamB',
         fontSize: 22,
         color: colors.text,
+    },
+    img:{
+        width:150,
+        height: 150,
+        borderRadius: 5,
+        margin: 10,
+    },
+    price:{
+        fontFamily: 'kalamB',
+        fontSize: 22,
+        color: colors.text,
+        padding:10,
+    },
+    description:{
+        fontFamily: 'kalamB',
+        fontSize: 12,
+        color: colors.text, 
+        padding: 10,                                       
+    },
+    buttonContainer: {
+        padding:10,
+        borderRadius:5,
+        marginTop:50,
     }
 });
