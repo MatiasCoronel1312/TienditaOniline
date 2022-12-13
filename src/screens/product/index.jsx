@@ -1,17 +1,14 @@
 import React from "react";
 import { View, Text, Button,Image } from "react-native";
-
 import { colors } from "../../constants/themes/colors";
-
-import { MenuComidas } from "../../constants/data";
 import { styles } from "./styles";
-import { ProductItem } from "../../components";
+import { useSelector } from "react-redux";
 
 
-const Product = ({navigation, route}) => {
-    const { categoryId } = route.params;
-    const filteredFoodItem = MenuComidas.find((food) => food.id === categoryId);
-    const {title, price, image, description } = filteredFoodItem || {};
+const Product = ({navigation }) => {
+    const product = useSelector((state) => state.products.selected);
+    
+    const {title, price, image, description } = product || {};
 
     return (
         

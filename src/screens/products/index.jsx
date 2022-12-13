@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, Button, FlatList, SafeAreaView } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 import { ProductItem } from "../../components";
-import { MenuComidas } from "../../constants/data";
 
 import { colors } from "../../constants/themes/colors";
+import { filterProducts, selectProduct } from "../../store/actions";
 import { styles } from "./styles";
 
-const Products = ({navigation, route}) => {
-    const {categoryId, color} = route.params;
+const Products = ({navigation}) => {
+    const category = useSelector((state) => state.category.selected);
+    const filteredProducts = useSelector((state) => state.products.filteredProducts);
+    const dispatch = useDispatch();
+
+    useEffect (() => {
+        dispatch(filterProducts(category.id));
+    }, []);
+    
     const onSelected = (item) => {
-        navigation.navigate('Product', {categoryId: item.id, title: item.title})
+        dispatch (selectProduct(item.id));
+        navigation.navigate('Product', { title: item.title})
     };
-    const filteredCategoryFood = MenuComidas.filter( food => food.categoryId === categoryId);
-    const renderItem = ({item}) => <ProductItem item={item} onSelected={onSelected} />
+    
+    const renderItem = ({item}) => <ProductItem item={item} onSelected={onSelected} color={category.color}/>
     
     return (
         <SafeAreaView style={styles.container}>
             
             <FlatList
-                data={filteredCategoryFood}
+                data={filteredProducts}
                 renderItem={renderItem}
                 keyExtractor={(item)=> item.id.toString()}
                 style={styles.containerList}
