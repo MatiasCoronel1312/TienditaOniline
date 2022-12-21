@@ -6,6 +6,8 @@ const { Add_To_Cart, Remove_To_Cart, Confirm_Order } = cartTypes;
 const initialState = {
     items: [],
     total: 0,
+    loading: false,
+    error: null,
 }
 
 const cartReducer = ( state = initialState, action) => {
@@ -25,7 +27,26 @@ const cartReducer = ( state = initialState, action) => {
                 ...state,
                 items: updatedCart,
                 total: sumaTotal(updatedCart),
-            }
+            };
+            case Remove_To_Cart :
+                const filteredCart = state.items.filter((item) => item.id !== action.id);
+                return {
+                    ...state,
+                    items: filteredCart,
+                    total: sumaTotal(filteredCart)
+                }
+            case Confirm_Order:
+                if (action.result){
+                    return {
+                        ...state,
+                        items: [],
+                        total: 0,
+                    };
+                }
+                return {
+                    ...state,
+                    error: action.error,
+                }
     default:
         return state;
     }

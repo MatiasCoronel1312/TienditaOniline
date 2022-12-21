@@ -15,6 +15,17 @@ export const styles = StyleSheet.create({
         borderTopColor: colors.primary,
         paddingVertical: 10,
     },
+    buttonDisabledConfirm: {
+        backgroundColor: colors.background,
+        borderRadius: 5,
+        paddingHorizontal: 20,
+        paddingVertical: 15,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginHorizontal: 10,
+        marginVertical: 5,
+    },
     Confirm : {
         backgroundColor: colors.secondary,
         borderRadius: 5,

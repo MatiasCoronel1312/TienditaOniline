@@ -3,14 +3,19 @@ import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { MenuCart } from "../../constants/data";
 import { CartItem } from "../../components";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { ConfirmCart,  RemoveToCart } from "../../store/actions";
 
 const Cart = ({navigator}) => {
+    const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart.items);
     const total = useSelector((state) => state.cart.total);
-    const onDelete = (id) => {
-        console.warn('Borrar', id );
-    }
+    const onDelete = (id) => {        
+            dispatch(RemoveToCart(id))
+    };
+    const onCreateOrder = () => {
+        dispatch(ConfirmCart(cart, total));
+    };
     
 
     const keyExtractor = (item) => item.id.toString();
@@ -28,7 +33,7 @@ const Cart = ({navigator}) => {
                 />
             </View>
             <View style={styles.footer}>
-                <TouchableOpacity style={styles.Confirm} onPress={() => {null}}>
+                <TouchableOpacity disabled={cart.length === 0} style={cart.length === 0? styles.buttonDisabledConfirm: styles.Confirm} onPress={onCreateOrder}>
                     <Text style={styles.textButtonConfirm}>Confirmar</Text>
                     <View style={styles.totalContainer}>
                         <Text style={styles.textTotal} >Total</Text>
